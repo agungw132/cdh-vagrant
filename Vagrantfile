@@ -73,7 +73,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end  
 
   config.vm.define :c7410 do |c7408|
-    c7408.vm.hostname = "c7408.cdh.testlab"
+    c7408.vm.hostname = "c7410.cdh.testlab"
     c7408.vm.network :private_network, ip: "192.168.74.110"
   end
     
