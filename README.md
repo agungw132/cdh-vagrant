@@ -71,6 +71,14 @@ I understand the risks, let me continue with cluster creation.` and click `Conti
 - Eventually you will see `Status  Finished`. Click on the `Cloudera Manager` logo or go to `http://c7401.cdh.testlab:7180/cmf/home`
 - That's it, you can start using the services. 
 
+## Additional setting
+- To have spark runs well, set `yarn.scheduler.maximum-allocation-mb` and `yarn.nodemanager.resource.memory-mb` to 4 GB (set from cloudera manager UI)
+- Run the following so user vagrant could have access to HDFS
+```
+sudo -u hdfs hadoop fs -mkdir /user/vagrant
+sudo -u hdfs hadoop fs -chown root /user/vagrant
+```
+
 ## Cluster Ops
 - SSH to a node: `vagrant ssh`
 - Suspend the cluster: `vagrant suspend`
