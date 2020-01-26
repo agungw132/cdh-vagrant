@@ -76,7 +76,7 @@ I understand the risks, let me continue with cluster creation.` and click `Conti
 - Run the following so user vagrant could have access to HDFS
 ```
 sudo -u hdfs hadoop fs -mkdir /user/vagrant
-sudo -u hdfs hadoop fs -chown root /user/vagrant
+sudo -u hdfs hadoop fs -chown vagrant /user/vagrant
 ```
 
 ## Cluster Ops
