@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     c7401.vm.hostname = "c7401.cdh.testlab"
     c7401.vm.network :private_network, ip: "192.168.74.101"
     c7401.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--memory", "12000"]
+      vb.customize ["modifyvm", :id, "--memory", "16000"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
     end
