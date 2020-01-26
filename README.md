@@ -78,6 +78,10 @@ I understand the risks, let me continue with cluster creation.` and click `Conti
 sudo -u hdfs hadoop fs -mkdir /user/vagrant
 sudo -u hdfs hadoop fs -chown vagrant /user/vagrant
 ```
+- Impala is installed in server-2:
+```
+impala-shell -i c7402.cdh.testlab -d default
+```
 
 ## Cluster Ops
 - SSH to a node: `vagrant ssh`
