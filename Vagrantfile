@@ -38,8 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
-    end
-    
+    end    
   end
 
   config.vm.define :c7403 do |c7403|
@@ -49,6 +48,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]    
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end
 
   config.vm.define :c7404 do |c7404|
@@ -58,6 +58,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end
 
   config.vm.define :c7405 do |c7405|
@@ -67,6 +68,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]    
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end
 
   config.vm.define :c7406 do |c7406|
@@ -76,6 +78,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end
 
   config.vm.define :c7407 do |c7407|
@@ -85,6 +88,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end
 
   config.vm.define :c7408 do |c7408|
@@ -94,6 +98,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end
   
   config.vm.define :c7409 do |c7409|
@@ -103,6 +108,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end  
 
   config.vm.define :c7410 do |c7410|
@@ -112,5 +118,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
       vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+    end
   end 
 end
