@@ -7,4 +7,6 @@
 192.168.74.106 c7406.cdh.testlab c7406
 192.168.74.107 c7407.cdh.testlab c7407
 192.168.74.108 c7408.cdh.testlab c7408
+192.168.74.109 c7409.cdh.testlab c7409
+192.168.74.110 c7410.cdh.testlab c7410
 # End of hosts of cdh-vagrant
