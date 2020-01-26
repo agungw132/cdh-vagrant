@@ -20,8 +20,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # HARDWARE NOTE: Change this values according to your hardware.
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 4096] # RAM allocated to each VM
-    vb.customize ["modifyvm", :id, "--cpus", 2] # CPUs allocated to each VM
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
 
@@ -30,21 +28,36 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :c7401 do |c7401|
     c7401.vm.hostname = "c7401.cdh.testlab"
     c7401.vm.network :private_network, ip: "192.168.74.101"
+    c7401.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "12000"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+    end
   end
 
   config.vm.define :c7402 do |c7402|
     c7402.vm.hostname = "c7402.cdh.testlab"
     c7402.vm.network :private_network, ip: "192.168.74.102"
+    c7402.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+    end
+    
   end
 
   config.vm.define :c7403 do |c7403|
     c7403.vm.hostname = "c7403.cdh.testlab"
     c7403.vm.network :private_network, ip: "192.168.74.103"
+    c7403.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]    
   end
 
   config.vm.define :c7404 do |c7404|
     c7404.vm.hostname = "c7404.cdh.testlab"
     c7404.vm.network :private_network, ip: "192.168.74.104"
+    c7404.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
   end
 
   config.vm.define :c7405 do |c7405|
