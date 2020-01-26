@@ -21,8 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # HARDWARE NOTE: Change this values according to your hardware.
   config.vm.define :c7401 do |c7401|
     c7401.vm.hostname = "c7401.cdh.testlab"
-    c7401.vm.network "public_network", bridge: "enp5s0"
-    c7401.vm.network :public_network, ip: "192.168.100.201"
+    c7401.vm.network :private_network, ip: "192.168.74.101"
     c7401.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "16000"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
