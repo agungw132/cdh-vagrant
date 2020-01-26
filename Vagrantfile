@@ -19,10 +19,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #config.vm.box_url = "http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box"
 
   # HARDWARE NOTE: Change this values according to your hardware.
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
-  end
-
   config.vm.provision :shell, :path => "bootstrap.sh"
 
   config.vm.define :c7401 do |c7401|
@@ -31,6 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     c7401.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "12000"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
     end
   end
 
@@ -40,6 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     c7402.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
     end
     
   end
@@ -50,6 +48,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     c7403.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]    
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
 
   config.vm.define :c7404 do |c7404|
@@ -58,36 +57,60 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     c7404.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "4096"]
       vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
 
   config.vm.define :c7405 do |c7405|
     c7405.vm.hostname = "c7405.cdh.testlab"
     c7405.vm.network :private_network, ip: "192.168.74.105"
+    c7405.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]    
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
 
   config.vm.define :c7406 do |c7406|
     c7406.vm.hostname = "c7406.cdh.testlab"
     c7406.vm.network :private_network, ip: "192.168.74.106"
+    c7406.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
 
   config.vm.define :c7407 do |c7407|
     c7407.vm.hostname = "c7407.cdh.testlab"
     c7407.vm.network :private_network, ip: "192.168.74.107"
+    c7407.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
 
   config.vm.define :c7408 do |c7408|
     c7408.vm.hostname = "c7408.cdh.testlab"
     c7408.vm.network :private_network, ip: "192.168.74.108"
+    c7408.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end
   
   config.vm.define :c7409 do |c7409|
-    c7408.vm.hostname = "c7409.cdh.testlab"
-    c7408.vm.network :private_network, ip: "192.168.74.109"
+    c7409.vm.hostname = "c7409.cdh.testlab"
+    c7409.vm.network :private_network, ip: "192.168.74.109"
+    c7409.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
   end  
 
-  config.vm.define :c7410 do |c7408|
-    c7408.vm.hostname = "c7410.cdh.testlab"
-    c7408.vm.network :private_network, ip: "192.168.74.110"
-  end
-    
+  config.vm.define :c7410 do |c7410|
+    c7410.vm.hostname = "c7410.cdh.testlab"
+    c7410.vm.network :private_network, ip: "192.168.74.110"
+    c7410.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "4"]
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", 90] # Single virtual CPU can use up to 90% of a single host CPU.
+  end 
 end
